@@ -99,6 +99,14 @@ export default {
               rawCSSSource: ExtendedCSSRawSource,
               title: 'Counter extended',
               params: {
+                fonts: [
+                  {
+                    label: 'Counter font',
+                    wixParam: 'mainFont',
+                    defaultFont: 'arial',
+                    fixedSize: true,
+                  },
+                ],
                 numbers: [
                   {
                     label: 'Counter Width',

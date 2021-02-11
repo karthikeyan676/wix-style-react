@@ -1,6 +1,6 @@
 :import {
     -st-from: "../../common/formatters.st";
-    -st-named: applyUnit, color, fallback, font, value;
+    -st-named: applyUnit, color, fallback, font, value, applyOpacity;
 }
 
 :import {
@@ -8,22 +8,49 @@
     -st-named: errorColor;
 }
 
+/*Defaults*/
 :vars {
-    /*Defaults*/
     DefaultColor: color-5;
     DefaultDisabledColor: color-3;
     DefaultErrorColor: value(errorColor);
+    DefaultFont: "Body-M";
     DefaultBackgroundColor: color-1;
     DefaultWidth: 104px;
     DefaultWidthXsmall: 80px;
 }
 
+/*Overrides*/
 :vars {
-    /*Overrides*/
-    MainColor: --overridable;
+    /*
+        The counter's box border width
+        @default 1
+    */
+    MainBoxBorderWidth: --overridable;
+    /*
+        The counter's background color
+        @default 1
+    */
     MainBackgroundColor: --overridable;
+    /*
+        The counter's text and buttons color
+        @default color-5
+    */
+    MainColor: --overridable;
+    /*
+        The counter's disabled color
+        @default 1
+    */
     DisabledColor: --overridable;
+    /*
+        The counter's width
+        @default 1
+    */
     MainWidth: --overridable;
+    /*
+        counter's font 
+        @default 1
+    */
+    MainFont: --overridable;
 }
 
 :vars {
@@ -32,6 +59,8 @@
     counterDisabledColor: color(fallback(value(DisabledColor), value(DefaultDisabledColor)));
     counterWidth: fallback(value(MainWidth), value(DefaultWidth));
     counterWidthXsmall: fallback(value(MainWidth), value(DefaultWidthXsmall));
+    counterFont: fallback(font(value(MainFont)), font(value(DefaultFont)));
+
 }
 
 .root {
@@ -44,7 +73,12 @@
     background: color(value(counterBackgroundColor));
     border-width: 1px;
     border-style: solid;
-    border-color: color(value(counterColor));
+    border-color: applyOpacity(color(value(counterColor)), 0.6);
+}
+
+.root:focus-within,
+.root:hover {
+    border-color: applyOpacity(color(value(counterColor)), 1);
 }
 
 .root:not(.xsmall) {
@@ -111,11 +145,15 @@
 }
 
 .root:not(.xsmall) input{
-    font: font("{theme: 'Body-M', size: '16px', lineHeight: '1.5em'}");
+    font: value(counterFont);
+    line-height: 1.5em;
+    font-size: 16px;
 }
 
 .xsmall input {
-    font: font("{theme: 'Body-M', size: '12px', lineHeight: '1em'}");
+    font: value(counterFont);
+    line-height: 1em;
+    font-size: 12px;
 }
 
 .xsmall svg {
