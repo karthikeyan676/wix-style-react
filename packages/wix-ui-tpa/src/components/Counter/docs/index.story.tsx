@@ -120,6 +120,11 @@ export default {
                     wixParam: 'disabledColor',
                     defaultColor: 'color-3',
                   },
+                  {
+                    label: 'Background Color',
+                    wixParam: 'mainBackgroundColor',
+                    defaultColor: 'color-1',
+                  },
                 ],
               },
             }),

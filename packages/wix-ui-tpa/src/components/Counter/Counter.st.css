@@ -21,12 +21,14 @@
 :vars {
     /*Overrides*/
     MainColor: --overridable;
+    MainBackgroundColor: --overridable;
     DisabledColor: --overridable;
     MainWidth: --overridable;
 }
 
 :vars {
     counterColor: color(fallback(value(MainColor), value(DefaultColor)));
+    counterBackgroundColor: color(fallback(value(MainBackgroundColor), value(DefaultBackgroundColor)));
     counterDisabledColor: color(fallback(value(DisabledColor), value(DefaultDisabledColor)));
     counterWidth: fallback(value(MainWidth), value(DefaultWidth));
     counterWidthXsmall: fallback(value(MainWidth), value(DefaultWidthXsmall));
@@ -39,7 +41,7 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    background: color(value(DefaultBackgroundColor));
+    background: color(value(counterBackgroundColor));
     border-width: 1px;
     border-style: solid;
     border-color: color(value(counterColor));
@@ -100,7 +102,7 @@
 }
 
 .root input {
-    background: color(value(DefaultBackgroundColor));
+    background: color(value(counterBackgroundColor));
     padding: 0;
     border: none;
     text-align: center;
