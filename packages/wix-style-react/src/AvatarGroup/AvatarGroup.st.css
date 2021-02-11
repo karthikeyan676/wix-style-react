@@ -40,21 +40,18 @@
 
 .moreItemAvatar {
   -st-extends: Avatar;
-  -st-states: clickable(boolean);
   border-radius: 50%;
   user-select: none;
-  z-index: 1;
+  z-index: 100;
+
 }
 .root .moreItemAvatar ::avatar {
   background-color: white;
+  border-radius: 50%;
 }
 .root .moreItemAvatar ::avatar ::content {
   color: value(D20);
   visibility: visible !important;
-}
-
-.moreItemAvatar {
-  z-index: 100;
 }
 
 .root:type(condensed) .moreItemAvatar ::avatar::before {
@@ -70,28 +67,11 @@
 }
 
 .root:type(condensed) .moreItemAvatar ::avatar {
-  background-color: white;
   border: 2px solid white;
-  border-radius: 50%;
 }
 
 .root:type(stretched) .moreItemAvatar ::avatar {
-  background-color: white;
   border: 2px solid value(D10-10);
-  border-radius: 50%;
-}
-
-
-.moreItemAvatar:clickable {
-  cursor: pointer;
-}
-
-.moreItemAvatar:clickable ::avatar:hover {
-  background-color: value(B50);
-}
-
-.moreItemAvatar:clickable ::avatar:active {
-  background-color: value(B40);
 }
 
 /* Divider */
@@ -117,9 +97,3 @@
 .divider:size(medium) {
   height: 30px;
 }
-
-/* Popover */
-.popover {
-  z-index: 100;
-}
-
