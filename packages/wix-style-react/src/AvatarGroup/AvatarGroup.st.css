@@ -53,7 +53,7 @@
   visibility: visible !important;
 }
 
-.moreItemAvatar .root {
+.moreItemAvatar {
   z-index: 100;
 }
 
