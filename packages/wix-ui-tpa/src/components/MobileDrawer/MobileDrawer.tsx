@@ -24,13 +24,13 @@ interface DefaultProps {
 }
 
 interface State {
-  visiable;
+  visible;
 }
 
 /** MobileDrawers provide access to destinations and functionality menus, such as Action Menus, Filter Dropdown etc. This component should be used on mobile only. */
 export class MobileDrawer extends React.Component<MobileDrawerProps, State> {
   state = {
-    visiable: false,
+    visible: false,
   };
 
   static displayName = 'MobileDrawer';
@@ -39,8 +39,8 @@ export class MobileDrawer extends React.Component<MobileDrawerProps, State> {
     onRequestClose: () => {},
   };
 
-  onRequestClose() {
-    this.setState({ visiable: false });
+  _onRequestClose() {
+    this.setState({ visible: false });
     this.props.onRequestClose();
   }
 
@@ -52,33 +52,31 @@ export class MobileDrawer extends React.Component<MobileDrawerProps, State> {
       ['aria-labelledby']: ariaLabelledBy,
       ['aria-describedby']: ariaDescribedBy,
       onRequestClose,
+      className,
     } = this.props;
-    const { visiable } = this.state;
+    const { visible } = this.state;
 
-    if (isOpen && !visiable) {
+    if (isOpen && !visible) {
       setTimeout(() => {
-        this.setState({ visiable: true });
+        this.setState({ visible: true });
       }, 0);
     }
 
     return (
-      <div className={st(classes.root, className)} data-hook={this.props['data-hook']}>
-        <Modal isOpen={isOpen} onRequestClose={() => this.onRequestClose()}>
+      <div
+        className={st(classes.root, className)}
+        data-hook={this.props['data-hook']}
+      >
+        <Modal isOpen={isOpen} onRequestClose={() => this._onRequestClose()}>
           <div
-            className={classes.outerContentWrapper}
-            style={{
-              transform: visiable ? 'translateY(0px)' : 'translateY(320px)',
-            }}
+            className={st(classes.contentWrapper, { visible })}
+            role="dialog"
+            aria-modal="true"
+            aria-label={ariaLabel}
+            aria-labelledby={ariaLabelledBy}
+            aria-describedby={ariaDescribedBy}
           >
-            <div
-              role="dialog"
-              aria-modal="true"
-              aria-label={ariaLabel}
-              aria-labelledby={ariaLabelledBy}
-              aria-describedby={ariaDescribedBy}
-            >
-              {children}
-            </div>
+            {children}
           </div>
         </Modal>
       </div>

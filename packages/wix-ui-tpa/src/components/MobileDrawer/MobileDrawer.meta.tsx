@@ -9,5 +9,7 @@ MobileDrawerMetadata.addSim({
   props: {
     isOpen: true,
     children: 'Children',
+    ariaLabel: 'example aria lable',
+    ariaDescribedby: 'example aria describedby',
   } as MobileDrawerProps,
 });

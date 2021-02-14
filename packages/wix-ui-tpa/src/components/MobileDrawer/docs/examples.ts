@@ -29,10 +29,10 @@ export const exampleSocailMenu = buildExample(`
             Share
           </Text>
           <SocialBar>
-            <SocialBar.Icon icon={<SocialIcons.Facebook/>} />
-            <SocialBar.Icon icon={<SocialIcons.Instagram/>} />
-            <SocialBar.Icon icon={<SocialIcons.Linkedin/>} />
-            <SocialBar.Icon icon={<SocialIcons.Tumblr/>} />
+            <SocialBar.Icon icon={<Icons.Facebook/>} />
+            <SocialBar.Icon icon={<Icons.Instagram/>} />
+            <SocialBar.Icon icon={<Icons.Linkedin/>} />
+            <SocialBar.Icon icon={<Icons.Tumblr/>} />
           </SocialBar>
         </div>
       </MobileDrawer>
@@ -44,7 +44,7 @@ export const exampleActionMenu = buildExample(`
     <Button upgrade onClick={this.onOpenDialogButtonClick}>Open MobileDrawer</Button>
       <MobileDrawer isOpen={isOpen} onRequestClose={this.onClickOutOfModal}> 
         <div style={{width: '100vw'}}>
-          <ActionsMenuLayout style={{padding: '0'}}>
+          <ActionsMenuLayout>
             <ActionsMenuLayout.Item
               onClick={() => console.log('Video clicked')}
               content="Take a Video"
