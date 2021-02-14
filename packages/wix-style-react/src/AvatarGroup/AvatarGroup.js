@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { st, classes } from './AvatarGroup.st.css';
+import {st, classes} from './AvatarGroup.st.css';
 import Avatar from '../Avatar';
 import Divider from '../Divider';
-import { serializeItems, limitItemsLength } from './utils';
+import {serializeItems, limitItemsLength} from './utils';
 import MoreItemAvatar from './moreItemAvatar/MoreItemAvatar';
-import { dataHooks } from './constants';
+import {dataHooks} from './constants';
 
 /** AvatarGroup */
 const AvatarGroup = ({dataHook, className, type, items, maxItems, size, showDivider}) => {
@@ -36,26 +36,18 @@ const AvatarGroup = ({dataHook, className, type, items, maxItems, size, showDivi
             />
           );
         }
-
-        const renderAvatar = <Avatar
-          tabIndex={-1}
-          dataHook={dataHooks.avatarGroupItem}
-          key={key}
-          {...item}
-          className={classes.avatarItem}
-        />
-
-        if (index === 0 && showDivider) {
-          return [
-            renderAvatar,
-            <Divider
-              key={key + 'divider'}
-              direction={'vertical'}
-              className={st(classes.divider, {size: avatarSize, type})}
-            />,
-          ];
-        }
-        return renderAvatar;
+        return <React.Fragment key={key}>
+          <Avatar
+            tabIndex={-1}
+            dataHook={dataHooks.avatarGroupItem}
+            {...item}
+            className={classes.avatarItem}
+          />
+          {index === 0 && showDivider && <Divider
+            direction={'vertical'}
+            className={st(classes.divider, {size: avatarSize, type})}
+          />}
+        </React.Fragment>
       })}
     </div>
   );
