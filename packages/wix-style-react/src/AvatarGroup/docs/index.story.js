@@ -98,13 +98,7 @@ Don’t use it:\n
               '\n' +
               'By default component displays up to 5 items. The ‘N+’ indication will replace the last avatar, in case the number exceeds this limit.\n',
             source: examples.maxItems,
-          }),
-
-          example({
-            title: 'More indicator',
-            text: 'moreItemContent prop -  temp description',
-            source: examples.moreIndicator,
-          }),
+          })
         ],
       }),
 

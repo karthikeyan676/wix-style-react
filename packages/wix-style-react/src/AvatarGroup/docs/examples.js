@@ -29,7 +29,3 @@ export const size = `
 export const divider = `
 <AvatarGroup showDivider items={[{name: 'first avatar'}, {name: 'second avatar'}, {name: 'third avatar'}]}/>
 `;
-
-export const moreIndicator = `
-<AvatarGroup maxItems={2} items={[{name: 'first avatar'}, {name: 'second avatar'}, {name: 'third avatar'}]} moreItemContent={<div>Hello World!</div>}/>
-`;
