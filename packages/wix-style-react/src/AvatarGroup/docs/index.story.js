@@ -16,6 +16,7 @@ import {
 import { storySettings } from '../test/storySettings';
 import allComponents from '../../../stories/utils/allComponents';
 import * as examples from './examples';
+import { avatarItems } from '../utils';
 
 import AvatarGroup from '..';
 
@@ -29,13 +30,16 @@ export default {
   componentPath: '..',
 
   componentProps: {
-    buttonText: 'Hello World!',
+    showDivider: true,
+    type: 'stretched',
+    size: 'medium',
+    maxItems: 5,
+    items: [...avatarItems],
   },
 
   exampleProps: {
-    // Put here presets of props, for more info:
-    // https://github.com/wix/wix-ui/blob/master/packages/wix-storybook-utils/docs/usage.md#using-list
   },
+
 
   sections: [
     header({
