@@ -4,6 +4,6 @@ import { MobileDrawer } from './';
 
 visualize('MobileDrawer', () => {
   story('simple', () => {
-    snap('default props', <MobileDrawer>Children</MobileDrawer>);
+    snap('default props', <MobileDrawer isOpen>Children</MobileDrawer>);
   });
 });
