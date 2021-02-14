@@ -62,7 +62,7 @@ export class MobileDrawer extends React.Component<MobileDrawerProps, State> {
     }
 
     return (
-      <div data-hook={this.props['data-hook']}>
+      <div className={st(classes.root, className)} data-hook={this.props['data-hook']}>
         <Modal isOpen={isOpen} onRequestClose={() => this.onRequestClose()}>
           <div
             className={classes.outerContentWrapper}
