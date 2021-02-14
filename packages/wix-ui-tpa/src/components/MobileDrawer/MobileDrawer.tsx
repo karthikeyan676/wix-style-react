@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { classes } from './MobileDrawer.st.css';
+import { st, classes } from './MobileDrawer.st.css';
 import { Modal } from '../internal/Modal';
 import { TPAComponentProps } from 'src/types';
 
