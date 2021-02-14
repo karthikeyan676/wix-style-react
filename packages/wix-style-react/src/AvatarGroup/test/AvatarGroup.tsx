@@ -7,7 +7,7 @@ import * as enzyme from 'enzyme';
 import * as puppeteer from 'puppeteer';
 
 function avatarGroupWithMandatoryProps() {
-  return <AvatarGroup items={[{name: 'first user', color: 'A1'}, {name: 'second user', color: 'A2'}, {name: 'third avatar', color: 'A3'}]}/>;
+  return <AvatarGroup items={[{name: 'first user'}, {name: 'second user'}, {name: 'third avatar'}]}/>;
 }
 
 function avatarGroupWithAllProps() {
