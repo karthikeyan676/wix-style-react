@@ -4,7 +4,7 @@ import {st, classes} from './AvatarGroup.st.css';
 import Avatar from '../Avatar';
 import Divider from '../Divider';
 import {serializeItems, limitItemsLength} from './utils';
-import MoreItemAvatar from './moreItemAvatar/MoreItemAvatar';
+import MoreIndicator from './moreIndicator/MoreIndicator';
 import {dataHooks} from './constants';
 
 /** AvatarGroup */
@@ -29,7 +29,7 @@ const AvatarGroup = ({dataHook, className, type, items, maxItems, size, showDivi
         const key = `${Object.values(item)}`;
         if (item.isMoreItem) {
           return (
-            <MoreItemAvatar
+            <MoreIndicator
               {...item}
               key={key}
               className={st(classes.moreItemAvatar)}
