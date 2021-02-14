@@ -14,7 +14,7 @@ export interface MobileDrawerProps extends TPAComponentProps {
   'aria-label'?: string;
   /** Identifies the element that labels the drawer element. Optional. */
   'aria-labelledby'?: string;
-  /** Gives the dialog an accessible description by referring to the dialog content that describes the primary message or purpose of the dialog. Optional. */
+  /** Gives the drawer an accessible description by referring to the drawer content that describes the primary message or purpose of the drawer. Optional. */
   'aria-describedby'?: string;
 }
 
