@@ -13,7 +13,7 @@ function avatarGroupWithMandatoryProps() {
 function avatarGroupWithAllProps() {
   return (
     <AvatarGroup
-      items={[{name: 'first user', color: 'A1'}, {name: 'second user', color: 'A2'}, {name: 'third avatar', color: 'A3'},{name: 'forth avatar', color: 'A4'},{name: 'fifth avatar', color: 'A5'},{name: 'sixth avatar', color: 'A6'}]}
+      items={[{name: 'first user ', color: 'A1'}, {name: 'second user', color: 'A2'}, {name: 'third avatar', color: 'A3'},{name: 'forth avatar', color: 'A4'},{name: 'fifth avatar', color: 'A5'},{name: 'sixth avatar', color: 'A6'}]}
       dataHook="avatar-dataHook"
       className="className"
       type="stretched"
