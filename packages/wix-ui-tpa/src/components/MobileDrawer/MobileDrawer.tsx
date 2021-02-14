@@ -12,7 +12,7 @@ export interface MobileDrawerProps extends TPAComponentProps {
   children?: React.ReactNode;
   /** Defines a string value that labels the drawer element. Optional. */
   'aria-label'?: string;
-  /** Identifies the element that labels the dialog element. Optional. */
+  /** Identifies the element that labels the drawer element. Optional. */
   'aria-labelledby'?: string;
   /** Gives the dialog an accessible description by referring to the dialog content that describes the primary message or purpose of the dialog. Optional. */
   'aria-describedby'?: string;
