@@ -35,11 +35,6 @@ export const avatarGroupDriverFactory = (base, body) => {
       const avatarDriver = await avatarUniDriverFactory(avatarBase);
       return avatarDriver.getContentType();
     },
-    /**
-     * Hovers the component
-     * @returns {Promise<void>}
-     */
-    hover: async () => await findByHookAtIndex(base, dataHooks.avatarGroupItem).hover(),
 
     /**
      * Gets the moreIndicator content
@@ -54,5 +49,11 @@ export const avatarGroupDriverFactory = (base, body) => {
      */
     isMoreIndicatorExist: async () =>
       await findByHook(base, dataHooks.avatarGroupMoreItem).exists(),
+
+    /**
+     * Hovers the component
+     * @returns {Promise<void>}
+     */
+    hover: async () => await findByHookAtIndex(base, dataHooks.avatarGroupItem).hover()
   };
 };
