@@ -21,6 +21,8 @@ const files = {
     'CalendarCellPerfBasic.bundle.min.js': 5,
     'CalendarCellPerfExtended.bundle.min.js': 5,
     'CalendarPopover.bundle.min.js': 11,
+    'CalendarPopoverPerfBasic.bundle.min.js': 12,
+    'CalendarPopoverPerfExtended.bundle.min.js': 12,
     'Card.bundle.min.js': 5,
     'Checkbox.bundle.min.js': 7,
     'CheckboxGroup.bundle.min.js': 5,
