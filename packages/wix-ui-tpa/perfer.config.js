@@ -30,6 +30,8 @@ const files = {
     'CheckboxPerfBasic.bundle.min.js': 7,
     'CheckboxPerfExtended.bundle.min.js': 7,
     'CheckboxGroup.bundle.min.js': 5,
+    'CheckboxGroupPerfBasic.bundle.min.js': 5,
+    'CheckboxGroupPerfExtended.bundle.min.js': 5,
     'ColorPicker.bundle.min.js': 36,
     'CopyUrlButton.bundle.min.js': 38,
     'Counter.bundle.min.js': 35,
