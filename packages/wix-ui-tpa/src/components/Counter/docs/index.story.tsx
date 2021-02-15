@@ -104,14 +104,6 @@ export default {
                     label: 'Counter font',
                     wixParam: 'mainFont',
                     defaultFont: 'arial',
-                    size: 16,
-                    fixedSize: false,
-                  },
-                  {
-                    label: 'Xsamll Counter font',
-                    wixParam: 'mainXsmallFont',
-                    defaultFont: 'arial',
-                    size: 12,
                     fixedSize: false,
                   },
                 ],
@@ -127,8 +119,8 @@ export default {
                 ],
                 colors: [
                   {
-                    label: 'Main Color',
-                    wixParam: 'mainColor',
+                    label: 'Text Color',
+                    wixParam: 'textColor',
                     defaultColor: 'color-5',
                   },
                   {

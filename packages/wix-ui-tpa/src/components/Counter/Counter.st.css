@@ -24,44 +24,39 @@
 :vars {
     /*
         counter's font 
-        @default "{theme: 'Body-M', size: '16px', lineHeight: '1.5em'}"
+        @default Default "{theme: 'Body-M', size: '16px', lineHeight: '1.5em'}", Xsamll "{theme: 'Body-M', size: '12px', lineHeight: '1em'}"
     */
     MainFont: --overridable;
     /*
-        xsamll counter's font 
-        @default {theme: 'Body-M', size: '12px', lineHeight: '1em'}"
-    */
-    MainXsmallFont: --overridable;
-    /*
         The counter's background color
-        @default 1
+        @default color-1
     */
     MainBackgroundColor: --overridable;
     /*
         The counter's text and buttons color
         @default color-5
     */
-    MainColor: --overridable;
+    TextColor: --overridable;
     /*
         The counter's disabled color
-        @default 1
+        @default color-3
     */
     DisabledColor: --overridable;
     /*
         The counter's width
-        @default 1
+        @default Default size: 104px, XSmall size: 80px
     */
     MainWidth: --overridable;
 }
 
 :vars {
-    counterColor: color(fallback(value(MainColor), value(DefaultColor)));
+    counterColor: color(fallback(value(TextColor), value(DefaultColor)));
     counterBackgroundColor: color(fallback(value(MainBackgroundColor), value(DefaultBackgroundColor)));
     counterDisabledColor: color(fallback(value(DisabledColor), value(DefaultDisabledColor)));
     counterWidth: fallback(value(MainWidth), value(DefaultWidth));
     counterWidthXsmall: fallback(value(MainWidth), value(DefaultWidthXsmall));
     counterFont: fallback(font(value(MainFont)), font(value(DefaultFont)));
-    counterXsmallFont: fallback(font(value(MainXsmallFont)), font(value(DefaultXsmallFont)));
+    counterXsmallFont: fallback(font(value(MainFont)), font(value(DefaultXsmallFont)));
 }
 
 .root {
