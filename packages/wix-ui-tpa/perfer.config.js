@@ -37,6 +37,8 @@ const files = {
     'ColorPickerExtended.bundle.min.js': 36,
     'CopyUrlButton.bundle.min.js': 38,
     'Counter.bundle.min.js': 35,
+    'CounterPerfBasic.bundle.min.js': 35,
+    'CounterPerfExtended.bundle.min.js': 35,
     'DatePicker.bundle.min.js': 187,
     'DatePickerInput.bundle.min.js': 210,
     'Dialog.bundle.min.js': 11,
