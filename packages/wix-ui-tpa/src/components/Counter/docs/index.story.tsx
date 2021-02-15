@@ -104,7 +104,15 @@ export default {
                     label: 'Counter font',
                     wixParam: 'mainFont',
                     defaultFont: 'arial',
-                    fixedSize: true,
+                    size: 16,
+                    fixedSize: false,
+                  },
+                  {
+                    label: 'Xsamll Counter font',
+                    wixParam: 'mainXsmallFont',
+                    defaultFont: 'arial',
+                    size: 12,
+                    fixedSize: false,
                   },
                 ],
                 numbers: [

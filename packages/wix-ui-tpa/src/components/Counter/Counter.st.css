@@ -13,7 +13,8 @@
     DefaultColor: color-5;
     DefaultDisabledColor: color-3;
     DefaultErrorColor: value(errorColor);
-    DefaultFont: "Body-M";
+    DefaultFont: "{theme: 'Body-M', size: '16px', lineHeight: '1.5em'}";
+    DefaultXsmallFont: "{theme: 'Body-M', size: '12px', lineHeight: '1em'}";
     DefaultBackgroundColor: color-1;
     DefaultWidth: 104px;
     DefaultWidthXsmall: 80px;
@@ -22,10 +23,15 @@
 /*Overrides*/
 :vars {
     /*
-        The counter's box border width
-        @default 1
+        counter's font 
+        @default "{theme: 'Body-M', size: '16px', lineHeight: '1.5em'}"
     */
-    MainBoxBorderWidth: --overridable;
+    MainFont: --overridable;
+    /*
+        xsamll counter's font 
+        @default {theme: 'Body-M', size: '12px', lineHeight: '1em'}"
+    */
+    MainXsmallFont: --overridable;
     /*
         The counter's background color
         @default 1
@@ -46,11 +52,6 @@
         @default 1
     */
     MainWidth: --overridable;
-    /*
-        counter's font 
-        @default 1
-    */
-    MainFont: --overridable;
 }
 
 :vars {
@@ -60,7 +61,7 @@
     counterWidth: fallback(value(MainWidth), value(DefaultWidth));
     counterWidthXsmall: fallback(value(MainWidth), value(DefaultWidthXsmall));
     counterFont: fallback(font(value(MainFont)), font(value(DefaultFont)));
-
+    counterXsmallFont: fallback(font(value(MainXsmallFont)), font(value(DefaultXsmallFont)));
 }
 
 .root {
@@ -82,12 +83,14 @@
 }
 
 .root:not(.xsmall) {
+    font: value(counterFont);
     width: value(counterWidth);
     height: 40px;
     padding: 0 6px;
 }
 
 .root.xsmall {
+    font: value(counterXsmallFont);
     padding: 0 4px;
     width: value(counterWidthXsmall);
     height: 28px;
@@ -142,19 +145,9 @@
     text-align: center;
     width: 100%;
     color: value(counterColor);
+    font: inherit;
 }
 
-.root:not(.xsmall) input{
-    font: value(counterFont);
-    line-height: 1.5em;
-    font-size: 16px;
-}
-
-.xsmall input {
-    font: value(counterFont);
-    line-height: 1em;
-    font-size: 12px;
-}
 
 .xsmall svg {
     width: 8px;
@@ -162,17 +155,18 @@
     padding: 0;
 }
 
+.error {
+    padding: 5px 0 0;;
+}
+
 .xsmall .error {
     width: 16px;
     height: 16px;
-    padding: 2px 0 0 0;
 }
 
 .root:disabled input {
     color: color(value(counterDisabledColor));
 }
-
-
 
 /* Removing browser-specific default buttons inside input element */
 .root input::-webkit-outer-spin-button,
