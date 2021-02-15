@@ -27,6 +27,8 @@ const files = {
     'CardPerfBasic.bundle.min.js': 5,
     'CardPerfExtended.bundle.min.js': 5,
     'Checkbox.bundle.min.js': 7,
+    'CheckboxPerfBasic.bundle.min.js': 7,
+    'CheckboxPerfExtended.bundle.min.js': 7,
     'CheckboxGroup.bundle.min.js': 5,
     'ColorPicker.bundle.min.js': 36,
     'CopyUrlButton.bundle.min.js': 38,
