@@ -47,6 +47,8 @@ const files = {
     'DatePickerPerfBasic.bundle.min.js': 187,
     'DatePickerPerfExtended.bundle.min.js': 187,
     'DatePickerInput.bundle.min.js': 210,
+    'DatePickerInputPerfBasic.bundle.min.js': 210,
+    'DatePickerInputPerfExtended.bundle.min.js': 210,
     'Dialog.bundle.min.js': 11,
     'Divider.bundle.min.js': 5,
     'DotNavigation.bundle.min.js': 8,
