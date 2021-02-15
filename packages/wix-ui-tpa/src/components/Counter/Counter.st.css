@@ -80,7 +80,7 @@
 .root:not(.xsmall) {
     font: value(counterFont);
     width: value(counterWidth);
-    height: 40px;
+    height: calc((40 / 16) * 1em);
     padding: 0 6px;
 }
 
@@ -88,7 +88,7 @@
     font: value(counterXsmallFont);
     padding: 0 4px;
     width: value(counterWidthXsmall);
-    height: 28px;
+    height: calc((28 / 12) * 1em);
 }
 .root:error {
     border-color: value(DefaultErrorColor);
@@ -145,13 +145,13 @@
 
 
 .xsmall svg {
-    width: 8px;
-    height: 8px;
+    width: calc((8 / 16) * 1em);
+    height: calc((8 / 16) * 1em);
     padding: 0;
 }
 
-.error {
-    padding: 5px 0 0;;
+.root:not(.xsmall) .error {
+    padding: 5px 0 0;
 }
 
 .xsmall .error {
