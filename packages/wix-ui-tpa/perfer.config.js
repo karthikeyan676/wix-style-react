@@ -111,6 +111,8 @@ const files = {
     'RadioButtonGroupPerfBasic.bundle.min.js': 5,
     'RadioButtonGroupPerfExtended.bundle.min.js': 5,
     'Ratings.bundle.min.js': 7.6,
+    'RatingsPerfBasic.bundle.min.js': 7.6,
+    'RatingsPerfExtended.bundle.min.js': 7.6,
     'SectionNotification.bundle.min.js': 10.5,
     'ShareButton.bundle.min.js': 8,
     'SocialBar.bundle.min.js': 35,
