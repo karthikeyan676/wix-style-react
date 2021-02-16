@@ -217,6 +217,43 @@ describe('Table', () => {
         );
         expect(await driver.isRowSelectionDisabled(0)).toBe(true);
       });
+      it(`should disable row selection when passed selectionDisabled true`, async () => {
+        const { driver } = render(
+          <Table {...defaultProps} selectedIds={[]} selectionDisabled />,
+        );
+        await driver.clickRowCheckbox(0);
+        expect(await driver.isRowSelected(0)).toBe(false);
+      });
+
+      describe('when passed isRowSelectionDisabled prop', () => {
+        let tableProps;
+        const isRowSelectionDisabled = rowData => rowData.id === ID_1;
+        beforeEach(() => {
+          tableProps = {
+            ...defaultProps,
+            selectionDisabled: false,
+            isRowSelectionDisabled: isRowSelectionDisabled,
+          };
+        });
+        it(`should disable checkboxes that match 'isRowDisabled' prop`, async () => {
+          const { driver } = render(<Table {...tableProps} />);
+
+          expect(await driver.isRowSelectionDisabled(0)).toBe(true);
+          expect(await driver.isRowSelectionDisabled(1)).toBe(false);
+        });
+        it(`should disable row selection when it matches 'isRowDisabled' prop`, async () => {
+          const { driver } = render(<Table {...tableProps} />);
+
+          await driver.clickRowCheckbox(0);
+          expect(await driver.isRowSelected(0)).toBe(false);
+        });
+        it(`should not disable row selection when it does not match 'isRowDisabled' prop`, async () => {
+          const { driver } = render(<Table {...tableProps} />);
+
+          await driver.clickRowCheckbox(1);
+          expect(await driver.isRowSelected(1)).toBe(true);
+        });
+      });
     });
 
     describe('re-render', () => {

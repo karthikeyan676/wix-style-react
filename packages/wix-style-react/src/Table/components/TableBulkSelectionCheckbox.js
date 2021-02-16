@@ -9,12 +9,17 @@ export const TableBulkSelectionCheckbox = ({ dataHook, children }) => {
       consumerCompName="Table.BulkSelectionCheckbox"
       providerCompName="Table"
     >
-      {({ bulkSelectionState, toggleAll, disabled, deselectRowsByDefault }) => (
+      {({
+        bulkSelectionState,
+        toggleAll,
+        allRowsDisabled,
+        deselectRowsByDefault,
+      }) => (
         <Checkbox
           dataHook={dataHook}
           checked={bulkSelectionState === BulkSelectionState.ALL}
           indeterminate={bulkSelectionState === BulkSelectionState.SOME}
-          disabled={disabled}
+          disabled={allRowsDisabled}
           onChange={() =>
             toggleAll(deselectRowsByDefault, 'TableBulkSelectionCheckbox')
           }
