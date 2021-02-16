@@ -141,6 +141,8 @@ const files = {
     'TextAreaPerfBasic.bundle.min.js': 34,
     'TextAreaPerfExtended.bundle.min.js': 34,
     'TextButton.bundle.min.js': 7,
+    'TextButtonPerfBasic.bundle.min.js': 7,
+    'TextButtonPerfExtended.bundle.min.js': 7,
     'TextField.bundle.min.js': 37.1,
     'Toast.bundle.min.js': 8.3,
     'ToggleSwitch.bundle.min.js': 6,
