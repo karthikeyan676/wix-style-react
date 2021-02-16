@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { SectionNotification } from '../SectionNotification';
-import { classes } from './SectionNotification.st.css';
+import { classes } from './SectionNotificationExtended.st.css';
 
 export const SectionNotificationPerf = () => {
   return (
