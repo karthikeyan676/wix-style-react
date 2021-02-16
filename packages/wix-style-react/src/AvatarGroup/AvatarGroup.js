@@ -32,13 +32,12 @@ const AvatarGroup = ({dataHook, className, type, items, maxItems, size, showDivi
             <MoreIndicator
               {...item}
               key={key}
-              className={st(classes.moreItemAvatar)}
+              className={classes.moreItemAvatar}
             />
           );
         }
         return <React.Fragment key={key}>
           <Avatar
-            tabIndex={-1}
             dataHook={dataHooks.avatarGroupItem}
             {...item}
             className={classes.avatarItem}

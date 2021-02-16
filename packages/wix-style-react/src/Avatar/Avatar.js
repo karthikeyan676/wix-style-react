@@ -188,11 +188,7 @@ const CoreAvatarPropTypes = {
    * Click event handler (when this property is provided the component will be clickable
    * on hover and will have a pointer cursor).
    */
-  onClick: PropTypes.func,
-  /**
-   * Sets the tabIndex order
-   */
-  tabIndex: PropTypes.number,
+  onClick: PropTypes.func
 };
 
 Avatar.displayName = 'Avatar';
@@ -239,7 +235,6 @@ Avatar.defaultProps = {
   size: 'size48',
   shape: 'circle',
   showIndicationOnHover: false,
-  tabIndex: 0,
 };
 
 export default Avatar;

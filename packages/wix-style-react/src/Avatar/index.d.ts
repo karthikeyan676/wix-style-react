@@ -10,7 +10,6 @@ export interface CommonAvatarProps {
   placeholder?: React.ReactNode;
   title?: string;
   dataHook?: string;
-  tabIndex?: number;
 }
 
 
