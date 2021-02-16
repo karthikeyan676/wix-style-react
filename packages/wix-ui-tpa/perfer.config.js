@@ -63,6 +63,8 @@ const files = {
     'DropdownPerfBasic.bundle.min.js': 52,
     'DropdownPerfExtended.bundle.min.js': 52,
     'Event.bundle.min.js': 9.1,
+    'EventPerfBasic.bundle.min.js': 9.1,
+    'EventPerfExtended.bundle.min.js': 9.1,
     'FloatingDropdown.bundle.min.js': 44,
     'Grid.bundle.min.js': 5,
     'IconButton.bundle.min.js': 7,
