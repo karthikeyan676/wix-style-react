@@ -79,6 +79,8 @@ const files = {
     'IconButtonPerfBad.bundle.min.js': 7,
     'IconButtonPerfGood.bundle.min.js': 7,
     'IconToggle.bundle.min.js': 6,
+    'IconTogglePerfBasic.bundle.min.js': 6,
+    'IconTogglePerfExtended.bundle.min.js': 6,
     'Image.bundle.min.js': 15,
     'ThumbnailImage.bundle.min.js': 15,
     'Input.bundle.min.js': 6,
