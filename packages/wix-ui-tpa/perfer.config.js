@@ -128,6 +128,9 @@ const files = {
     'Tabs.bundle.min.js': 18.2,
     'TabsPerfBasic.bundle.min.js': 18.2,
     'TabsPerfExtended.bundle.min.js': 18.2,
+    'Tag.bundle.min.js': 6,
+    'TagPerfBasic.bundle.min.js': 6,
+    'TagPerfExtended.bundle.min.js': 6,
     'Tags.bundle.min.js': 8,
     'Text.bundle.min.js': 5,
     'TextArea.bundle.min.js': 34,
@@ -137,7 +140,6 @@ const files = {
     'ToggleSwitch.bundle.min.js': 6,
     'Tooltip.bundle.min.js': 31,
     'BoxSelection.bundle.min.js': 10,
-    'Tag.bundle.min.js': 6,
 };
 
 module.exports = {
