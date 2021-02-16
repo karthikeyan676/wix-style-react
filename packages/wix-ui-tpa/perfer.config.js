@@ -90,6 +90,7 @@ const files = {
     'LikeButtonPerfBasic.bundle.min.js': 7.6,
     'LikeButtonPerfExtended.bundle.min.js': 7.6,
     'NewCard.bundle.min.js': 5,
+    'NewCardPerfBasic.bundle.min.js': 5,
     'OverlappingCard.bundle.min.js': 5,
     'Pagination.bundle.min.js': 10.1,
     'Picker.bundle.min.js': 9,
