@@ -93,6 +93,8 @@ const files = {
     'NewCardPerfBasic.bundle.min.js': 5,
     'OverlappingCard.bundle.min.js': 5,
     'Pagination.bundle.min.js': 10.1,
+    'PaginationPerfBasic.bundle.min.js': 10.1,
+    'PaginationPerfExtended.bundle.min.js': 10.1,
     'Picker.bundle.min.js': 9,
     'ProgressBar.bundle.min.js': 6,
     'RadioButton.bundle.min.js': 7.2,
