@@ -121,6 +121,8 @@ const files = {
     'ShareButtonPerfExtended.bundle.min.js': 8,
     'SocialBar.bundle.min.js': 35,
     'Spinner.bundle.min.js': 5,
+    'SpinnerPerfBasic.bundle.min.js': 5,
+    'SpinnerPerfExtended.bundle.min.js': 5,
     'StatesButton.bundle.min.js': 10,
     'StripCard.bundle.min.js': 5,
     'Tabs.bundle.min.js': 18.2,
