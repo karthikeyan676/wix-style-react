@@ -57,6 +57,8 @@ const files = {
     'DividerPerfBasic.bundle.min.js': 5,
     'DividerPerfExtended.bundle.min.js': 5,
     'DotNavigation.bundle.min.js': 8,
+    'DotNavigationPerfBasic.bundle.min.js': 8,
+    'DotNavigationPerfExtended.bundle.min.js': 8,
     'Dropdown.bundle.min.js': 52,
     'Event.bundle.min.js': 9.1,
     'FloatingDropdown.bundle.min.js': 44,
