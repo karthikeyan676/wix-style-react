@@ -102,6 +102,8 @@ const files = {
     'PopoverPerfBasic.bundle.min.js': 29,
     'PopoverPerfExtended.bundle.min.js': 29,
     'ProgressBar.bundle.min.js': 6,
+    'ProgressBarPerfBasic.bundle.min.js': 6,
+    'ProgressBarPerfExtended.bundle.min.js': 6,
     'RadioButton.bundle.min.js': 7.2,
     'RadioButtonGroup.bundle.min.js': 5,
     'Ratings.bundle.min.js': 7.6,
