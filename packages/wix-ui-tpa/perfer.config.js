@@ -87,6 +87,8 @@ const files = {
     'ThumbnailImage.bundle.min.js': 15,
     'Input.bundle.min.js': 6,
     'LikeButton.bundle.min.js': 7.6,
+    'LikeButtonPerfBasic.bundle.min.js': 7.6,
+    'LikeButtonPerfExtended.bundle.min.js': 7.6,
     'NewCard.bundle.min.js': 5,
     'OverlappingCard.bundle.min.js': 5,
     'Pagination.bundle.min.js': 10.1,
