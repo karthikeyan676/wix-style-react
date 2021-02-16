@@ -14,6 +14,9 @@ const files = {
     'BadgePerfBasic.bundle.min.js': 3,
     'BadgePerfExtendedBad.bundle.min.js': 3.1,
     'BadgePerfExtendedGood.bundle.min.js': 3,
+    'BoxSelection.bundle.min.js': 10,
+    'BoxSelectionPerfBasic.bundle.min.js': 10,
+    'BoxSelectionPerfExtended.bundle.min.js': 10,
     'Button.bundle.min.js': 9,
     'ButtonPerfBasic.bundle.min.js': 9,
     'ButtonPerfExtended.bundle.min.js': 10,
@@ -153,7 +156,6 @@ const files = {
     'ToggleSwitchPerfBasic.bundle.min.js': 6,
     'ToggleSwitchPerfExtended.bundle.min.js': 6,
     'Tooltip.bundle.min.js': 31,
-    'BoxSelection.bundle.min.js': 10,
 };
 
 module.exports = {
