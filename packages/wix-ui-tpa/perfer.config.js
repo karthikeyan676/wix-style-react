@@ -117,6 +117,8 @@ const files = {
     'SectionNotificationPerfBasic.bundle.min.js': 10.5,
     'SectionNotificationPerfExtended.bundle.min.js': 10.5,
     'ShareButton.bundle.min.js': 8,
+    'ShareButtonPerfBasic.bundle.min.js': 8,
+    'ShareButtonPerfExtended.bundle.min.js': 8,
     'SocialBar.bundle.min.js': 35,
     'Spinner.bundle.min.js': 5,
     'StatesButton.bundle.min.js': 10,
