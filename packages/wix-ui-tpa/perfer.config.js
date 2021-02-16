@@ -126,6 +126,8 @@ const files = {
     'StatesButton.bundle.min.js': 10,
     'StripCard.bundle.min.js': 5,
     'Tabs.bundle.min.js': 18.2,
+    'TabsPerfBasic.bundle.min.js': 18.2,
+    'TabsPerfExtended.bundle.min.js': 18.2,
     'Tags.bundle.min.js': 8,
     'Text.bundle.min.js': 5,
     'TextArea.bundle.min.js': 34,
