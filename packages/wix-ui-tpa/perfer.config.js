@@ -60,6 +60,8 @@ const files = {
     'DotNavigationPerfBasic.bundle.min.js': 8,
     'DotNavigationPerfExtended.bundle.min.js': 8,
     'Dropdown.bundle.min.js': 52,
+    'DropdownPerfBasic.bundle.min.js': 52,
+    'DropdownPerfExtended.bundle.min.js': 52,
     'Event.bundle.min.js': 9.1,
     'FloatingDropdown.bundle.min.js': 44,
     'Grid.bundle.min.js': 5,
