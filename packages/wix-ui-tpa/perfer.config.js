@@ -54,6 +54,8 @@ const files = {
     'DialogPerferExtendedWired.bundle.min.js': 11,
     'DialogPerferExtendedFixed.bundle.min.js': 11,
     'Divider.bundle.min.js': 5,
+    'DividerPerfBasic.bundle.min.js': 5,
+    'DividerPerfExtended.bundle.min.js': 5,
     'DotNavigation.bundle.min.js': 8,
     'Dropdown.bundle.min.js': 52,
     'Event.bundle.min.js': 9.1,
