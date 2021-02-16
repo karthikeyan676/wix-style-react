@@ -96,6 +96,8 @@ const files = {
     'PaginationPerfBasic.bundle.min.js': 10.1,
     'PaginationPerfExtended.bundle.min.js': 10.1,
     'Picker.bundle.min.js': 9,
+    'PickerPerfBasic.bundle.min.js': 9,
+    'PickerPerfExtended.bundle.min.js': 9,
     'ProgressBar.bundle.min.js': 6,
     'RadioButton.bundle.min.js': 7.2,
     'RadioButtonGroup.bundle.min.js': 5,
