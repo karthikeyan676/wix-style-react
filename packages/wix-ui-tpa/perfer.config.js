@@ -105,6 +105,8 @@ const files = {
     'ProgressBarPerfBasic.bundle.min.js': 6,
     'ProgressBarPerfExtended.bundle.min.js': 6,
     'RadioButton.bundle.min.js': 7.2,
+    'RadioButtonPerfBasic.bundle.min.js': 7.2,
+    'RadioButtonPerfExtended.bundle.min.js': 7.2,
     'RadioButtonGroup.bundle.min.js': 5,
     'Ratings.bundle.min.js': 7.6,
     'SectionNotification.bundle.min.js': 10.5,
