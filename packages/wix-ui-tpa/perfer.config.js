@@ -132,6 +132,8 @@ const files = {
     'TagPerfBasic.bundle.min.js': 6,
     'TagPerfExtended.bundle.min.js': 6,
     'Tags.bundle.min.js': 8,
+    'TagsPerfBasic.bundle.min.js': 8,
+    'TagsPerfExtended.bundle.min.js': 8,
     'Text.bundle.min.js': 5,
     'TextArea.bundle.min.js': 34,
     'TextButton.bundle.min.js': 7,
