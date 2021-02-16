@@ -82,6 +82,8 @@ const files = {
     'IconTogglePerfBasic.bundle.min.js': 6,
     'IconTogglePerfExtended.bundle.min.js': 6,
     'Image.bundle.min.js': 15,
+    'ImagePerfBasic.bundle.min.js': 15,
+    'ImagePerfExtended.bundle.min.js': 15,
     'ThumbnailImage.bundle.min.js': 15,
     'Input.bundle.min.js': 6,
     'LikeButton.bundle.min.js': 7.6,
