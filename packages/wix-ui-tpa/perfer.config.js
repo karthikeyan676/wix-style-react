@@ -98,6 +98,9 @@ const files = {
     'Picker.bundle.min.js': 9,
     'PickerPerfBasic.bundle.min.js': 9,
     'PickerPerfExtended.bundle.min.js': 9,
+    'Popover.bundle.min.js': 29,
+    'PopoverPerfBasic.bundle.min.js': 29,
+    'PopoverPerfExtended.bundle.min.js': 29,
     'ProgressBar.bundle.min.js': 6,
     'RadioButton.bundle.min.js': 7.2,
     'RadioButtonGroup.bundle.min.js': 5,
@@ -117,7 +120,6 @@ const files = {
     'Toast.bundle.min.js': 8.3,
     'ToggleSwitch.bundle.min.js': 6,
     'Tooltip.bundle.min.js': 31,
-    'Popover.bundle.min.js': 29,
     'BoxSelection.bundle.min.js': 10,
     'Tag.bundle.min.js': 6,
 };
