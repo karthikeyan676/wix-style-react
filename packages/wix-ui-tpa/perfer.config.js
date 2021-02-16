@@ -150,6 +150,8 @@ const files = {
     'ThumbnailImagePerfExtended.bundle.min.js': 15,
     'Toast.bundle.min.js': 8.3,
     'ToggleSwitch.bundle.min.js': 6,
+    'ToggleSwitchPerfBasic.bundle.min.js': 6,
+    'ToggleSwitchPerfExtended.bundle.min.js': 6,
     'Tooltip.bundle.min.js': 31,
     'BoxSelection.bundle.min.js': 10,
 };
