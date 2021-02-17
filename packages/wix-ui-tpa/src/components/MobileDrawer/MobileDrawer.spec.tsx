@@ -34,7 +34,7 @@ describe('MobileDrawer', () => {
   it('should NOT render children if MobileDrawer not open', async () => {
     const driver = createDriver(
       <MobileDrawer>
-        <div data-hook="dialog-children">Dialog children</div>
+        <div data-hook="drawer-children">Drawer children</div>
       </MobileDrawer>,
     );
     expect(await driver.childExists('[data-hook="dialog-children"]')).toBe(
