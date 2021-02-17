@@ -38,6 +38,10 @@
 
 /* moreItemAvatar */
 
+.avatarContainer {
+
+}
+
 .moreItemAvatar {
   -st-extends: Avatar;
   border-radius: 50%;
