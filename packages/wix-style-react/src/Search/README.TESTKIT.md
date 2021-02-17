@@ -28,8 +28,8 @@ import React from 'react';
 import ReactTestUtils from 'react-dom/test-utils';
 import {mount} from 'enzyme';
 
-import {SearchTestkit} from '../../testkit';
-import {SearchTestkit as EnzymeSearchTestkit} from '../../testkit/enzyme';
+import {SearchTestkit} from 'wix-style-react/dist/testkit';
+import {SearchTestkit as EnzymeSearchTestkit} from 'wix-style-react/dist/testkit/enzyme';
 
 import Search from './Search';
 
@@ -88,7 +88,7 @@ describe('Example of Search testkits usage', () => {
 import {
     SearchTestkit,
     waitForVisibilityOf
-} from '../../testkit/protractor';
+} from 'wix-style-react/dist/testkit/protractor';
 import eyes from 'eyes.it';
 
 describe('Example of Search Protractor testkit usage', () => {
