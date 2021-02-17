@@ -26,7 +26,7 @@ describe('MobileDrawer', () => {
         <div data-hook="drawer-children">Drawer children</div>
       </MobileDrawer>,
     );
-    expect(await driver.childExists('[data-hook="dialog-children"]')).toBe(
+    expect(await driver.childExists('[data-hook="drawer-children"]')).toBe(
       true,
     );
   });
