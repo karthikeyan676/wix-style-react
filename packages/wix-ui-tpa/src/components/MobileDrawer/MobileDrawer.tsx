@@ -44,6 +44,12 @@ export class MobileDrawer extends React.Component<MobileDrawerProps, State> {
     this.props.onRequestClose();
   }
 
+  componentDidUpdate() {
+    if (this.props.isOpen && !this.state.visible) {
+      this.setState({ visible: true });
+    }
+  }
+
   render() {
     const {
       isOpen,
@@ -55,12 +61,6 @@ export class MobileDrawer extends React.Component<MobileDrawerProps, State> {
       className,
     } = this.props;
     const { visible } = this.state;
-
-    if (isOpen && !visible) {
-      setTimeout(() => {
-        this.setState({ visible: true });
-      }, 0);
-    }
 
     return (
       <div

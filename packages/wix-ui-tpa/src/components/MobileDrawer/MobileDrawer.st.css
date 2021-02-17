@@ -9,21 +9,19 @@ width: 100%;
 
 .contentWrapper {
 -st-states: visible;
-transform: translateY(320px);
-
 background-color: white;
 
 position:absolute;
-bottom: 0px;
+bottom: -100%;
 
 min-height: 60px;
 max-height: 320px;
 width: 100%;
 
-transition: 0.3s;
+transition: 0.3s ease;
 transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940)
 }
 
 .contentWrapper:visible {
-transform: translateY(0px);
+  bottom: 0;
 }

@@ -42,6 +42,18 @@ describe('MobileDrawer', () => {
     );
   });
 
+  it('expect mobileDrawer to be isOpen false as default', async () => {
+    const driver = createDriver(<MobileDrawer>Cildren</MobileDrawer>);
+
+    expect(await driver.isOpen()).toBe(false);
+  });
+
+  it('expect mobileDrawer to be isOpen if open', async () => {
+    const driver = createDriver(<MobileDrawer isOpen>Cildren</MobileDrawer>);
+
+    expect(await driver.isOpen()).toBe(true);
+  });
+
   describe('testkit', () => {
     it('should exist', async () => {
       expect(
@@ -53,18 +65,6 @@ describe('MobileDrawer', () => {
           },
         ),
       ).toBe(true);
-    });
-
-    it('expect mobileDrawer to be isOpen false as default', async () => {
-      const driver = createDriver(<MobileDrawer>Cildren</MobileDrawer>);
-
-      expect(await driver.isOpen()).toBe(false);
-    });
-
-    it('expect mobileDrawer to be isOpen if open', async () => {
-      const driver = createDriver(<MobileDrawer isOpen>Cildren</MobileDrawer>);
-
-      expect(await driver.isOpen()).toBe(true);
     });
   });
 
