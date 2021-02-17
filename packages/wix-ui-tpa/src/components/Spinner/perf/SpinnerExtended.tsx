@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Spinner } from '../';
-import { classes } from './SpinnerWiringExtended.st.css';
+import { classes } from './SpinnerExtended.st.css';
 
-export const SpinnerWiringExtended = () => {
+export const SpinnerExtended = () => {
   return <Spinner className={classes.root} />;
 };

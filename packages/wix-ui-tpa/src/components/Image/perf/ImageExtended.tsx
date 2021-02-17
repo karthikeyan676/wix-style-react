@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Image } from '..';
-import { classes } from './ImageWiringExtended.st.css';
+import { classes } from './ImageExtended.st.css';
 
-export const ImageWiringExtended = () => {
+export const ImageExtended = () => {
   return (
     <Image
       src="c5f754_dd75514d14fa4057b4f4a6cc8ce7add3~mv2.jpg"

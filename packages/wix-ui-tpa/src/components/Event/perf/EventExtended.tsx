@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Event } from '../';
-import { classes } from './EventWiringExtended.st.css';
+import { classes } from './EventExtended.st.css';
 
-export const EventWiringExtended = () => {
+export const EventExtended = () => {
   return (
     <Event className={classes.root} time="20:30" title="Blink 182 Concert" />
   );
