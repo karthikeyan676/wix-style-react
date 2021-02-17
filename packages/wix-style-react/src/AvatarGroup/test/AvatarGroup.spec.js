@@ -43,7 +43,7 @@ describe(AvatarGroup.displayName, () => {
       const {driver} = render(<AvatarGroup items={avatarItems} maxItems={7}/>);
       const expectedText = '2+';
       expect(await driver.getAvatarsCount()).toBe(7);
-      expect(await driver.getAvatarTextContentByIndex(6)).toBe(expectedText);
+      expect(await driver.getMoreIndicatorContent()).toBe(expectedText);
     });
   });
 

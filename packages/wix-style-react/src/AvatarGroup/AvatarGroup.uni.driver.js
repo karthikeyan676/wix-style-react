@@ -31,9 +31,9 @@ export const avatarGroupDriverFactory = (base, body) => {
      * @returns {Promise<string>}
      */
     getAvatarContentTypeByIndex: async index => {
-      const avatarBase = await findByHookAtIndex(base, dataHooks.avatarGroupItem, index)
+      const avatarBase = await findByHookAtIndex(base, dataHooks.avatarCore, index) // getContentType is available on core avatar element
       const avatarDriver = await avatarUniDriverFactory(avatarBase);
-      return avatarDriver.getContentType();
+      return await avatarDriver.getContentType();
     },
 
     /**
@@ -41,19 +41,13 @@ export const avatarGroupDriverFactory = (base, body) => {
      * @returns {Promise<string>}
      */
     getMoreIndicatorContent: async () =>
-      await findByHook(base, dataHooks.avatarGroupMoreItem).text(),
+      await (await base.$(`[data-indicator=${dataHooks.avatarGroupMoreItem}]`)).text(),
 
     /**
      * Checks whether the moreIndicatior exists
      * @returns {Promise<boolean>}
      */
     isMoreIndicatorExist: async () =>
-      await findByHook(base, dataHooks.avatarGroupMoreItem).exists(),
-
-    /**
-     * Hovers the component
-     * @returns {Promise<void>}
-     */
-    hover: async () => await findByHookAtIndex(base, dataHooks.avatarGroupItem).hover()
+      await (await base.$(`[data-indicator=${dataHooks.avatarGroupMoreItem}]`)).exists()
   };
 };

@@ -5,7 +5,8 @@ import { dataHooks } from '../constants';
 const MoreIndicator = ({className, size, text}) => {
   return (
     <Avatar
-      dataHook={dataHooks.avatarGroupMoreItem}
+      dataHook={dataHooks.avatarGroupItem}
+      data-indicator={dataHooks.avatarGroupMoreItem}
       className={className}
       size={size}
       text={text}

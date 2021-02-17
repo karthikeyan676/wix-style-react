@@ -8,5 +8,4 @@ export interface AvatarGroupUniDriver extends BaseUniDriver {
   getAvatarContentTypeByIndex(index: number): Promise<contentType>;
   getMoreIndicatorContent(): Promise<string>;
   isMoreIndicatorExist(): Promise<boolean>;
-  hover(): Promise<void>;
 }

@@ -38,8 +38,8 @@ const AvatarGroup = ({dataHook, className, type, items, maxItems, size, showDivi
         }
         return <React.Fragment key={key}>
           <Avatar
-            dataHook={dataHooks.avatarGroupItem}
             {...item}
+            dataHook={dataHooks.avatarGroupItem}
             className={classes.avatarItem}
           />
           {index === 0 && showDivider && <Divider
