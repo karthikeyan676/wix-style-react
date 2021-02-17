@@ -165,7 +165,11 @@ export class RadioButton extends React.Component<
     return this.props['aria-label'] ? this.props['aria-label'] : label;
   };
 
-  _getContent = (suffix: React.ReactNode | string, label: string, children: React.ReactNode) => {
+  _getContent = (
+    suffix: React.ReactNode | string,
+    label: string,
+    children: React.ReactNode,
+  ) => {
     if (children) {
       return children;
     }
