@@ -26,17 +26,6 @@ export const avatarGroupDriverFactory = (base, body) => {
       await findByHookAtIndex(base, dataHooks.avatarGroupItem, index).text(),
 
     /**
-     * Gets the content type
-     * @param {number} index Avatar index
-     * @returns {Promise<string>}
-     */
-    getAvatarContentTypeByIndex: async index => {
-      const avatarBase = await findByHookAtIndex(base, dataHooks.avatarCore, index) // getContentType is available on core avatar element
-      const avatarDriver = await avatarUniDriverFactory(avatarBase);
-      return await avatarDriver.getContentType();
-    },
-
-    /**
      * Gets the moreIndicator content
      * @returns {Promise<string>}
      */
