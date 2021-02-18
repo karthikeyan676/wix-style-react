@@ -211,6 +211,24 @@ describe('Table', () => {
         );
         expect(await driver.isBulkSelectionDisabled()).toBe(true);
       });
+
+      it(`should disable bulk selection when no item is selectable`, async () => {
+        const { driver } = render(
+          <Table {...defaultProps} selectionDisabled={() => true} />,
+        );
+        expect(await driver.isBulkSelectionDisabled()).toBe(true);
+      });
+
+      it(`should not disable bulk selection when some items are selectable`, async () => {
+        const { driver } = render(
+          <Table
+            {...defaultProps}
+            selectionDisabled={rowData => rowData.id === ID_1}
+          />,
+        );
+        expect(await driver.isBulkSelectionDisabled()).toBe(false);
+      });
+
       it(`should disable row selection when passed 'selectionDisabled' prop`, async () => {
         const { driver } = render(
           <Table {...defaultProps} selectionDisabled />,
@@ -225,14 +243,13 @@ describe('Table', () => {
         expect(await driver.isRowSelected(0)).toBe(false);
       });
 
-      describe('when passed isRowSelectionDisabled prop', () => {
+      describe('when passed selectionDisabled prop as function', () => {
         let tableProps;
-        const isRowSelectionDisabled = rowData => rowData.id === ID_1;
+        const selectionDisabled = rowData => rowData.id === ID_1;
         beforeEach(() => {
           tableProps = {
             ...defaultProps,
-            selectionDisabled: false,
-            isRowSelectionDisabled: isRowSelectionDisabled,
+            selectionDisabled: selectionDisabled,
           };
         });
         it(`should disable checkboxes that match 'isRowDisabled' prop`, async () => {

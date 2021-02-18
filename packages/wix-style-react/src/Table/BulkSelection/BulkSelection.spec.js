@@ -14,14 +14,10 @@ describe('BulkSelection', () => {
     console.error.mockRestore();
   });
 
-  const defaultProps = {
-    isRowSelectionDisabled: () => false,
-  };
-
   let _selectionContext;
   const mountComponent = props =>
     mount(
-      <BulkSelection {...defaultProps} {...props}>
+      <BulkSelection {...props}>
         <BulkSelectionConsumer>
           {selectionContext => {
             _selectionContext = selectionContext;
@@ -191,95 +187,55 @@ describe('BulkSelection', () => {
     });
   });
 
-  describe('isRowSelectionDisabled', () => {
+  describe('selectionDisabled', () => {
     const randomRow = {};
+
+    it('should be false when prop is not set', () => {
+      mountComponent({
+        allIds: [1, 2, 3],
+      });
+
+      expect(_selectionContext.selectionDisabled).toBe(false);
+    });
 
     it('should be false when there are items', () => {
       mountComponent({
         allIds: [1, 2, 3],
-        isRowSelectionDisabled: () => false,
+        selectionDisabled: () => false,
       });
 
-      expect(_selectionContext.isRowSelectionDisabled()).toBe(false);
+      expect(_selectionContext.selectionDisabled()).toBe(false);
     });
 
-    it('should be true when disabled is set', () => {
+    it('should be true when disabled is set (boolean)', () => {
       mountComponent({
         allIds: [1, 2, 3],
-        isRowSelectionDisabled: () => true,
+        selectionDisabled: true,
       });
 
-      expect(_selectionContext.isRowSelectionDisabled(randomRow)).toBe(true);
+      expect(_selectionContext.selectionDisabled).toBe(true);
+    });
+
+    it('should be true when disabled is set (function)', () => {
+      mountComponent({
+        allIds: [1, 2, 3],
+        selectionDisabled: () => true,
+      });
+
+      expect(_selectionContext.selectionDisabled(randomRow)).toBe(true);
     });
 
     it('should update to true when disabled is updated', () => {
       const component = mountComponent({
         allIds: [1, 2, 3],
-        isRowSelectionDisabled: () => false,
+        selectionDisabled: () => false,
       });
 
-      expect(_selectionContext.isRowSelectionDisabled(randomRow)).toBe(false);
+      expect(_selectionContext.selectionDisabled(randomRow)).toBe(false);
 
-      component.setProps({ isRowSelectionDisabled: () => true });
+      component.setProps({ selectionDisabled: () => true });
 
-      expect(_selectionContext.isRowSelectionDisabled(randomRow)).toBe(true);
-    });
-  });
-
-  describe('allRowsDisabled', () => {
-    const randomRow = {};
-
-    it('should be false when there are items', () => {
-      mountComponent({
-        allIds: [1, 2, 3],
-        allRowsDisabled: false,
-      });
-
-      expect(_selectionContext.allRowsDisabled).toBe(false);
-    });
-
-    it('should be true when allRowsDisabled is set', () => {
-      mountComponent({
-        allIds: [1, 2, 3],
-        allRowsDisabled: true,
-      });
-
-      expect(_selectionContext.allRowsDisabled).toBe(true);
-    });
-
-    it('should be true when there are no items', () => {
-      mountComponent({
-        allIds: [],
-        allRowsDisabled: false,
-      });
-
-      expect(_selectionContext.allRowsDisabled).toBe(true);
-    });
-
-    it('should update to true when allRowsDisabled is updated', () => {
-      const component = mountComponent({
-        allIds: [1, 2, 3],
-        allRowsDisabled: false,
-      });
-
-      expect(_selectionContext.allRowsDisabled).toBe(false);
-
-      component.setProps({ allRowsDisabled: true });
-
-      expect(_selectionContext.allRowsDisabled).toBe(true);
-    });
-
-    it('should update to true when allIds is updated', () => {
-      const component = mountComponent({
-        allIds: [1, 2, 3],
-        allRowsDisabled: false,
-      });
-
-      expect(_selectionContext.allRowsDisabled).toBe(false);
-
-      component.setProps({ allIds: [] });
-
-      expect(_selectionContext.allRowsDisabled).toBe(true);
+      expect(_selectionContext.selectionDisabled(randomRow)).toBe(true);
     });
   });
 });

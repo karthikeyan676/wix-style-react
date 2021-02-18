@@ -27,8 +27,12 @@ export function createColumns({ tableProps, bulkSelectionContext }) {
   const createCheckboxColumn = ({
     toggleSelectionById,
     isSelected,
-    isRowSelectionDisabled,
+    selectionDisabled,
   }) => {
+    const isRowSelectionDisabled = rowData =>
+      selectionDisabled === true ||
+      (typeof selectionDisabled === 'function' && selectionDisabled(rowData));
+
     return {
       title: tableProps.hideBulkSelectionCheckbox ? (
         ''
@@ -124,11 +128,6 @@ export class Table extends React.Component {
     return withWrapper ? <div data-hook={dataHook}>{children}</div> : children;
   }
 
-  isRowSelectionDisabled = rowData => {
-    const { isRowSelectionDisabled, selectionDisabled } = this.props;
-    return selectionDisabled || isRowSelectionDisabled(rowData);
-  };
-
   render() {
     const {
       data,
@@ -142,7 +141,6 @@ export class Table extends React.Component {
       horizontalScroll,
       hideHeader,
       selectionDisabled,
-      isRowSelectionDisabled,
     } = this.props;
 
     if (hideHeader) {
@@ -153,7 +151,8 @@ export class Table extends React.Component {
 
     let hasUnselectables = null;
     let allIds = data.map((rowData, rowIndex) =>
-      rowData.unselectable || isRowSelectionDisabled(rowData)
+      rowData.unselectable ||
+      (typeof selectionDisabled === 'function' && selectionDisabled(rowData))
         ? (hasUnselectables = hasUnselectablesSymbol)
         : defaultTo(rowData.id, rowIndex),
     );
@@ -177,8 +176,7 @@ export class Table extends React.Component {
             ref={_ref => (this.bulkSelection = _ref)}
             selectedIds={selectedIds}
             deselectRowsByDefault={deselectRowsByDefault}
-            isRowSelectionDisabled={this.isRowSelectionDisabled}
-            allRowsDisabled={selectionDisabled}
+            selectionDisabled={selectionDisabled}
             hasMoreInBulkSelection={
               infiniteScroll && Boolean(totalSelectableCount) && hasMore
             }
@@ -216,7 +214,6 @@ Table.defaultProps = {
   horizontalScroll: false,
   stickyColumns: 0,
   isRowDisabled: () => false,
-  isRowSelectionDisabled: () => false,
 };
 
 Table.propTypes = {
@@ -251,8 +248,10 @@ Table.propTypes = {
     PropTypes.arrayOf(PropTypes.number),
   ]),
 
-  /** Is selection disabled for all table rows */
-  selectionDisabled: PropTypes.bool,
+  /** Can be either a boolean or a function.
+   * If passed a boolean, disables selection for all table rows.
+   * If passed a function, it will be called for every row in `data` to specify if its checkbox should be disabled. Example: `isRowSelectionDisabled={(rowData) => !rowData.isSelectable}` */
+  selectionDisabled: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
 
   /** Indicates the `SelectionContext.toggleAll` behaviour when some rows are selected. `true` means SOME -> NONE, `false` means SOME -> ALL */
   deselectRowsByDefault: PropTypes.bool,
@@ -373,8 +372,6 @@ Table.propTypes = {
   stickyColumns: PropTypes.number,
   /** a function which will be called for every row in `data` to specify if it should appear as disabled. Example: `isRowDisabled={(rowData) => !rowData.isEnabled}` */
   isRowDisabled: PropTypes.func,
-  /** a function which will be called for every row in `data` to specify if its checkbox should be disabled. Example: `isRowSelectionDisabled={(rowData) => !rowData.isSelectable}` */
-  isRowSelectionDisabled: PropTypes.func,
 };
 
 // export default Table;

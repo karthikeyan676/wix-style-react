@@ -12,14 +12,14 @@ export const TableBulkSelectionCheckbox = ({ dataHook, children }) => {
       {({
         bulkSelectionState,
         toggleAll,
-        allRowsDisabled,
+        selectionDisabled,
         deselectRowsByDefault,
       }) => (
         <Checkbox
           dataHook={dataHook}
           checked={bulkSelectionState === BulkSelectionState.ALL}
           indeterminate={bulkSelectionState === BulkSelectionState.SOME}
-          disabled={allRowsDisabled}
+          disabled={selectionDisabled === true}
           onChange={() =>
             toggleAll(deselectRowsByDefault, 'TableBulkSelectionCheckbox')
           }
