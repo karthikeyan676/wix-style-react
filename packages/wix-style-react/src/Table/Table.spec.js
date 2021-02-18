@@ -252,19 +252,19 @@ describe('Table', () => {
             selectionDisabled: selectionDisabled,
           };
         });
-        it(`should disable checkboxes that match 'isRowDisabled' prop`, async () => {
+        it(`should disable checkboxes that match 'selectionDisabled' prop`, async () => {
           const { driver } = render(<Table {...tableProps} />);
 
           expect(await driver.isRowSelectionDisabled(0)).toBe(true);
           expect(await driver.isRowSelectionDisabled(1)).toBe(false);
         });
-        it(`should disable row selection when it matches 'isRowDisabled' prop`, async () => {
+        it(`should disable row selection when it matches 'selectionDisabled' prop`, async () => {
           const { driver } = render(<Table {...tableProps} />);
 
           await driver.clickRowCheckbox(0);
           expect(await driver.isRowSelected(0)).toBe(false);
         });
-        it(`should not disable row selection when it does not match 'isRowDisabled' prop`, async () => {
+        it(`should not disable row selection when it does not match 'selectionDisabled' prop`, async () => {
           const { driver } = render(<Table {...tableProps} />);
 
           await driver.clickRowCheckbox(1);

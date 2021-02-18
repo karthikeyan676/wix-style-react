@@ -252,7 +252,7 @@ export class BulkSelection extends React.Component {
       deselectRowsByDefault,
       /** Can be either a boolean or a function.
        * A boolean affects selection of all table rows.
-       * A function will be called for every row in `data` to specify if its checkbox should be disabled. Example: `selectionDisabled={(rowData) => !rowData.isSelectable}` */
+       * A function will be called for every row in `data` to specify if its checkbox should be disabled. */
       selectionDisabled:
         selectionDisabled === true ||
         allIds.length === 0 ||

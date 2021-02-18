@@ -250,7 +250,7 @@ Table.propTypes = {
 
   /** Can be either a boolean or a function.
    * If passed a boolean, disables selection for all table rows.
-   * If passed a function, it will be called for every row in `data` to specify if its checkbox should be disabled. Example: `isRowSelectionDisabled={(rowData) => !rowData.isSelectable}` */
+   * If passed a function, it will be called for every row in `data` to specify if its checkbox should be disabled. Example: `selectionDisabled={(rowData) => !rowData.isSelectable}` */
   selectionDisabled: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
 
   /** Indicates the `SelectionContext.toggleAll` behaviour when some rows are selected. `true` means SOME -> NONE, `false` means SOME -> ALL */
