@@ -1,7 +1,6 @@
 :import {
   -st-from: "../IconButton.st.css";
   -st-default: TPAIconButton;
-  -st-named: skin-line, skin-full;
 }
 
 .root {

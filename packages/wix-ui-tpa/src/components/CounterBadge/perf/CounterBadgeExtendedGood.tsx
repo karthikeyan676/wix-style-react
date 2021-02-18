@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { CounterBadge } from '..';
-import { classes } from './CounterBadgeExtendedBad.st.css';
+import { classes } from './CounterBadgeExtendedGood.st.css';
 
-export const CounterBadgeExtendedBad = () => {
+export const CounterBadgeExtendedGood = () => {
   return <CounterBadge className={classes.root} value={20} />;
 };

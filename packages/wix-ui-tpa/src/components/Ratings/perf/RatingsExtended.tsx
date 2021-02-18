@@ -8,7 +8,7 @@ export const RatingsExtended = () => {
       name={'Name'}
       value={4}
       onSelect={() => {}}
-      className={classes.ratings}
+      className={classes.root}
     />
   );
 };

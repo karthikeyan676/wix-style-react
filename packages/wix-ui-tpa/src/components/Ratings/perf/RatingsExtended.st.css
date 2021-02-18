@@ -3,9 +3,7 @@
     -st-default: TPARatings;
 }
 
-.root {}
-
-.ratings {
+.root {
     -st-mixin: TPARatings(
             IconColor '"--iconColor"',
             IconEmptyColor '"--iconEmptyColor"',
