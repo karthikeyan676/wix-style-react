@@ -102,7 +102,7 @@ export class Counter extends React.Component<CounterProps> {
           name="increment"
           disabled={disabled || (max && value + step > max)}
         >
-          <Plus className={classes.btnIcon}/>
+          <Plus className={classes.btnIcon} />
         </Button>
         {shouldShowErrorMessageTooltip && (
           <Tooltip
