@@ -17,7 +17,7 @@ class TablePageExample extends React.Component {
         <Page.Header title="My Table" />
         <Page.Content>
           <Table
-            slectionDisabled={(rowData) => rowData.inventory === 'Out of stock'}
+            selectionDisabled={(rowData) => rowData.inventory === 'Out of stock'}
             data={filteredData}
             columns={[
               {
