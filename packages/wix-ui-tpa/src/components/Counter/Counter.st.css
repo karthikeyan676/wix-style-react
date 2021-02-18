@@ -23,7 +23,7 @@
 /*Overrides*/
 :vars {
     /*
-        counter's font 
+        counter's font
         @default Default "{theme: 'Body-M', size: '16px', lineHeight: '1.5em'}", Xsamll "{theme: 'Body-M', size: '12px', lineHeight: '1em'}"
     */
     MainFont: --overridable;
@@ -84,12 +84,13 @@
     padding: 0 6px;
 }
 
-.root.xsmall {
+.xsmall {
     font: value(counterXsmallFont);
     padding: 0 4px;
     width: value(counterWidthXsmall);
     height: calc((28 / 12) * 1em);
 }
+
 .root:error {
     border-color: value(DefaultErrorColor);
 }
@@ -100,13 +101,14 @@
 
 .btn {
     background: none;
-    padding: 6px;
+    padding: calc((6 / 16) * 1em);
     border: none;
     cursor: pointer;
+    font: inherit;
 }
 
 .xsmall .btn {
-    padding: 4px;
+    padding: calc((4 / 12) * 1em);
 }
 
 .btn path {
@@ -121,12 +123,33 @@
     fill: color(value(counterDisabledColor));
 }
 
-.root:disabled .btn {
-    color: color(value(counterDisabledColor));
+.btnIcon {
+    width: calc((12 / 16) * 1em);
+    height: calc((12 / 16) * 1em);
+    font: inherit;
 }
 
-.root:error svg {
+.xsmall .btnIcon,
+.xsmall .error {
+    width: calc((8 / 12) * 1em);
+    height: calc((8 / 12) * 1em);
+}
+
+.error {
     color: value(DefaultErrorColor);
+    width: calc((20.5 / 16) * 1em);
+    height: calc((20.5 / 16) * 1em);
+    font: inherit;
+    display: block;
+}
+
+.xsmall .error {
+    width: calc((14 / 12) * 1em);
+    height: calc((14 / 12) * 1em);
+}
+
+.root:disabled .btn {
+    color: color(value(counterDisabledColor));
 }
 
 .root .inputWrapper {
@@ -141,22 +164,6 @@
     width: 100%;
     color: value(counterColor);
     font: inherit;
-}
-
-.xsmall svg {
-    width: 0.5em;
-    height: 0.5em;
-    padding: 0;
-    font: inherit;
-}
-
-.root:not(.xsmall) .error {
-    padding: 5px 0 0;
-}
-
-.xsmall .error {
-    width: 16px;
-    height: 16px;
 }
 
 .root:disabled input {
